@@ -1,0 +1,11 @@
+[package]
+name = "blockchain"
+version = "0.1.0"
+authors = ["Marco van Kaathoven <marco1979nl@gmail.com>", "tensor-programming <aboltensor@tensor-programming.com>"]
+
+[dependencies]
+time = "*"
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"
+sha2 = "*"
