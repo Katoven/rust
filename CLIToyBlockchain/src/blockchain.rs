@@ -22,6 +22,7 @@ pub struct Blockheader {
     difficulty: u32,
 }
 
+#[derive(Serialize, Debug)]
 pub struct Block {
     header: Blockheader,
     count: u32,
@@ -105,7 +106,7 @@ impl Chain {
         block.header.merkle = Chain::get_merkle(block.transactions.clone());
         Chain::proof_of_work(&mut block.header);
 
-        //println!("{:?}", &block);
+        println!("{:#?}", &block);
         self.chain.push(block);
         true
     }
